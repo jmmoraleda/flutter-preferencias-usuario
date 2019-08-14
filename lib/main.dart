@@ -5,6 +5,7 @@ import 'package:preferenciasusuarioapp/src/share_prefs/preferencias_usuario.dart
  
 void main() async{
  
+  // Inicializamos las preferencias antes de ejecutar la aplicación, por eso tenemos el await
   final prefs = new PreferenciasUsuario();
   await prefs.initPrefs();
 

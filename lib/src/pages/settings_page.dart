@@ -49,7 +49,7 @@ class _SettingsPageState extends State<SettingsPage> {
         title: Text('Ajustes'),
         backgroundColor: (prefs.colorSecundario) ? Colors.teal : Colors.blue,
       ),
-      drawer: MenuWidget(),
+      drawer: MenuWidget(), // Esto sería el menú lateral de la aplicación
       body: ListView(
         children: <Widget>[
 
@@ -58,8 +58,8 @@ class _SettingsPageState extends State<SettingsPage> {
             child: Text('Settings', style: TextStyle(fontSize: 45.0, fontWeight: FontWeight.bold )),
           ),
 
-          Divider(),
-          SwitchListTile(
+          Divider(), // Línea separadora
+          SwitchListTile( 
             value: _colorSecundario,
             title: Text('Color secundario'),
             onChanged: ( value ){

@@ -1,24 +1,25 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
-class PreferenciasUsuario {
+class PreferenciasUsuario { // Clase para centralizar el tratamiento de las preferencias de estados de los usuarios.
 
+  // Implementamos el patrón singleton para que siempre tengamos una sola instancia
   static final PreferenciasUsuario _instancia = new PreferenciasUsuario._internal();
 
   factory PreferenciasUsuario() {
-    return _instancia;
+    return _instancia; // Cuando se haga un new PreferenciasUsuarios se devolverá siempre la misma instancia.
   }
 
   PreferenciasUsuario._internal();
 
   SharedPreferences _prefs;
 
-  initPrefs() async {
+  initPrefs() async { // Inicializamos las preferencias
     this._prefs = await SharedPreferences.getInstance();
   }
 
   // GET y SET del Genero
   get genero {
-    return _prefs.getInt('genero') ?? 1;
+    return _prefs.getInt('genero') ?? 1; // La doble interrogación es que, si no existe el género, por defecto la ponemos a 1.
   }
 
   set genero( int value ) {

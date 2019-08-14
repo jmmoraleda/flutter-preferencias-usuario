@@ -19,7 +19,7 @@ class HomePage extends StatelessWidget {
         title: Text('Preferencias de Usuario'),
         backgroundColor: (prefs.colorSecundario) ? Colors.teal : Colors.blue,
       ),
-      drawer: MenuWidget(),
+      drawer: MenuWidget(), // Esto sería el menú lateral de la aplicación
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[

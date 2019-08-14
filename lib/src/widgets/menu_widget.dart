@@ -10,18 +10,18 @@ class MenuWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       child: ListView(
-        padding: EdgeInsets.zero,
+        padding: EdgeInsets.zero, // Con esto conseguimos que la imagen empiece desde arriba
         children: <Widget>[
           DrawerHeader(
             child: Container(),
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('assets/menu-img.jpg'),
-                fit: BoxFit.cover
+                fit: BoxFit.cover // Para que expanda todo el ancho posible
               )
             ),
           ),
-
+          // Ahora ponemos las opciones del menú
           ListTile(
             leading: Icon( Icons.pages, color: Colors.blue ),
             title: Text('Home'),
